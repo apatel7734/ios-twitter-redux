@@ -64,8 +64,14 @@ class SidebarViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+
     }
     
+    
+    func drawerControllerFromAppDelegate() -> MMDrawerController? {
+        var appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        return appDelegate.drawerViewController
+    }
     /*
     // MARK: - Navigation
     

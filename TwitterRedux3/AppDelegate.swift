@@ -27,7 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginviewcontroller") as LoginViewController
         
-        drawerViewController = MMDrawerController(centerViewController: contentViewController, leftDrawerViewController: sidebarViewController)
+        var timelineViewController = storyboard.instantiateViewControllerWithIdentifier("timelineviewcontroller") as TimelineViewController
+        
+        drawerViewController = MMDrawerController(centerViewController: timelineViewController, leftDrawerViewController: sidebarViewController)
         
         drawerViewController?.setMaximumLeftDrawerWidth(240.0, animated: true, completion: nil)
         drawerViewController?.openDrawerGestureModeMask = MMOpenDrawerGestureMode.All

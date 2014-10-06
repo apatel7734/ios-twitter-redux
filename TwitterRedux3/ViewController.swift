@@ -49,10 +49,6 @@ class ViewController: UIViewController {
             screenNameLabel.text = "@\(screenName)"
         }
         
-        
-        
-        
-        
     }
     
     override func didReceiveMemoryWarning() {

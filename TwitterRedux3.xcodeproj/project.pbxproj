@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7503D79919E24332006B7ACE /* hambuger_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7503D79819E24332006B7ACE /* hambuger_menu.png */; };
+		7503D79B19E24390006B7ACE /* hambuger_menu_-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 7503D79A19E24390006B7ACE /* hambuger_menu_-24.png */; };
 		759D38FC19E1F5CE0040D48B /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759D38FA19E1F5CE0040D48B /* Tweet.swift */; };
 		759D38FD19E1F5CE0040D48B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759D38FB19E1F5CE0040D48B /* User.swift */; };
 		759D390019E1F96D0040D48B /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759D38FF19E1F96D0040D48B /* TwitterClient.swift */; };
 		759D390219E211810040D48B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759D390119E211810040D48B /* LoginViewController.swift */; };
+		759D390419E221250040D48B /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759D390319E221250040D48B /* TimelineViewController.swift */; };
+		759D390619E224EE0040D48B /* CustomTimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759D390519E224EE0040D48B /* CustomTimelineTableViewCell.swift */; };
+		759D390B19E22B8F0040D48B /* favorite_grey_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 759D390719E22B8F0040D48B /* favorite_grey_off.png */; };
+		759D390C19E22B8F0040D48B /* favorite_yellow_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 759D390819E22B8F0040D48B /* favorite_yellow_on.png */; };
+		759D390D19E22B8F0040D48B /* reply_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 759D390919E22B8F0040D48B /* reply_grey.png */; };
+		759D390E19E22B8F0040D48B /* retweeted_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 759D390A19E22B8F0040D48B /* retweeted_grey.png */; };
 		75A67B2819E1E09A008BBA8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A67B2719E1E09A008BBA8C /* AppDelegate.swift */; };
 		75A67B2A19E1E09A008BBA8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A67B2919E1E09A008BBA8C /* ViewController.swift */; };
 		75A67B2D19E1E09A008BBA8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75A67B2B19E1E09A008BBA8C /* Main.storyboard */; };
@@ -35,10 +43,18 @@
 
 /* Begin PBXFileReference section */
 		3CB7E50165BE45089B61639D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7503D79819E24332006B7ACE /* hambuger_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hambuger_menu.png; sourceTree = "<group>"; };
+		7503D79A19E24390006B7ACE /* hambuger_menu_-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hambuger_menu_-24.png"; sourceTree = "<group>"; };
 		759D38FA19E1F5CE0040D48B /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		759D38FB19E1F5CE0040D48B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		759D38FF19E1F96D0040D48B /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
 		759D390119E211810040D48B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		759D390319E221250040D48B /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		759D390519E224EE0040D48B /* CustomTimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTimelineTableViewCell.swift; sourceTree = "<group>"; };
+		759D390719E22B8F0040D48B /* favorite_grey_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite_grey_off.png; sourceTree = "<group>"; };
+		759D390819E22B8F0040D48B /* favorite_yellow_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite_yellow_on.png; sourceTree = "<group>"; };
+		759D390919E22B8F0040D48B /* reply_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reply_grey.png; sourceTree = "<group>"; };
+		759D390A19E22B8F0040D48B /* retweeted_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retweeted_grey.png; sourceTree = "<group>"; };
 		75A67B2219E1E09A008BBA8C /* TwitterRedux3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterRedux3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A67B2619E1E09A008BBA8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A67B2719E1E09A008BBA8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +116,8 @@
 				75A67B4C19E1E374008BBA8C /* HeaderTableViewCell.swift */,
 				75A67B4E19E1E37F008BBA8C /* TimelineTableViewCell.swift */,
 				759D390119E211810040D48B /* LoginViewController.swift */,
+				759D390319E221250040D48B /* TimelineViewController.swift */,
+				759D390519E224EE0040D48B /* CustomTimelineTableViewCell.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -151,6 +169,12 @@
 		75A67B2519E1E09A008BBA8C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7503D79819E24332006B7ACE /* hambuger_menu.png */,
+				7503D79A19E24390006B7ACE /* hambuger_menu_-24.png */,
+				759D390719E22B8F0040D48B /* favorite_grey_off.png */,
+				759D390819E22B8F0040D48B /* favorite_yellow_on.png */,
+				759D390919E22B8F0040D48B /* reply_grey.png */,
+				759D390A19E22B8F0040D48B /* retweeted_grey.png */,
 				75A67B2619E1E09A008BBA8C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -255,6 +279,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759D390B19E22B8F0040D48B /* favorite_grey_off.png in Resources */,
+				7503D79B19E24390006B7ACE /* hambuger_menu_-24.png in Resources */,
+				759D390E19E22B8F0040D48B /* retweeted_grey.png in Resources */,
+				759D390D19E22B8F0040D48B /* reply_grey.png in Resources */,
+				7503D79919E24332006B7ACE /* hambuger_menu.png in Resources */,
+				759D390C19E22B8F0040D48B /* favorite_yellow_on.png in Resources */,
 				75A67B2D19E1E09A008BBA8C /* Main.storyboard in Resources */,
 				75A67B3219E1E09A008BBA8C /* LaunchScreen.xib in Resources */,
 				75A67B2F19E1E09A008BBA8C /* Images.xcassets in Resources */,
@@ -315,8 +345,10 @@
 				75A67B4F19E1E37F008BBA8C /* TimelineTableViewCell.swift in Sources */,
 				759D38FC19E1F5CE0040D48B /* Tweet.swift in Sources */,
 				75A67B4B19E1E29A008BBA8C /* SidebarViewController.swift in Sources */,
+				759D390619E224EE0040D48B /* CustomTimelineTableViewCell.swift in Sources */,
 				75A67B2819E1E09A008BBA8C /* AppDelegate.swift in Sources */,
 				759D38FD19E1F5CE0040D48B /* User.swift in Sources */,
+				759D390419E221250040D48B /* TimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

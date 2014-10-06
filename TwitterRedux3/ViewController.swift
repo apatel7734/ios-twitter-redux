@@ -56,6 +56,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func slideMenuBarButtonClicked(sender: UIBarButtonItem) {
+        drawerControllerFromAppDelegate()?.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+    }
+    
+    
+    
+    func drawerControllerFromAppDelegate() -> MMDrawerController? {
+        var appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        return appDelegate.drawerViewController
+    }
+    
     
 }
 

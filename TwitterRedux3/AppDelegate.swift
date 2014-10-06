@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     var drawerViewController: MMDrawerController?
+    var viewControllers: [UIViewController] = [UIViewController]()
     
     func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         
@@ -24,10 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var sidebarViewController = storyboard.instantiateViewControllerWithIdentifier("sidebarviewcontroller") as SidebarViewController
         
         var contentViewController = storyboard.instantiateViewControllerWithIdentifier("contentviewcontroller") as ViewController
+        viewControllers.append(contentViewController)
         
         var loginViewController = storyboard.instantiateViewControllerWithIdentifier("loginviewcontroller") as LoginViewController
         
         var timelineViewController = storyboard.instantiateViewControllerWithIdentifier("timelineviewcontroller") as TimelineViewController
+        viewControllers.append(timelineViewController)
         
         drawerViewController = MMDrawerController(centerViewController: timelineViewController, leftDrawerViewController: sidebarViewController)
         

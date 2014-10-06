@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Me-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TwitterRedux3" customModuleProvider="target" sceneMemberID="viewController">
@@ -144,7 +144,13 @@
                             <constraint firstItem="bj9-SM-m3d" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="zgJ-9L-eyk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="YcV-px-wR8"/>
+                    <navigationItem key="navigationItem" title="Me" id="YcV-px-wR8">
+                        <barButtonItem key="leftBarButtonItem" image="hambuger_menu_-24.png" id="4xz-vk-HnG">
+                            <connections>
+                                <action selector="slideMenuBarButtonClicked:" destination="vXZ-lx-hvc" id="Og0-Ys-Du7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="backgroundProfileImage" destination="ZhB-If-mso" id="UPu-it-uaB"/>
                         <outlet property="companyNameLabel" destination="rHL-1o-Cp4" id="MCQ-Yr-is2"/>

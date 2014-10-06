@@ -13,7 +13,6 @@ class SidebarViewController: UIViewController,UITableViewDelegate,UITableViewDat
     @IBOutlet weak var sidebarTableView: UITableView!
     
     var timelines: [String] = ["reserved for header","Home Timeline", "Mentions Timeline"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,7 +63,24 @@ class SidebarViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-
+        var appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        if(indexPath.row == 0){
+            println("Profile Clicked")
+            var profileViewController = appDelegate.viewControllers[0]
+            drawerControllerFromAppDelegate()?.setCenterViewController(profileViewController, withCloseAnimation: true, completion: nil)
+            
+        }else if ( indexPath.row == 1){
+            println("Home Timeline Clicked")
+            var homeTimelineController = appDelegate.viewControllers[1]
+            drawerControllerFromAppDelegate()?.setCenterViewController(homeTimelineController, withCloseAnimation: true, completion: nil)
+            
+        }else if(indexPath.row == 2){
+            println("Mentions Clicked")
+            var mentionTimelineController = appDelegate.viewControllers[1]
+            drawerControllerFromAppDelegate()?.setCenterViewController(mentionTimelineController, withCloseAnimation: true, completion: nil)
+        }
+        
     }
     
     
@@ -72,14 +88,4 @@ class SidebarViewController: UIViewController,UITableViewDelegate,UITableViewDat
         var appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         return appDelegate.drawerViewController
     }
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
-    
 }

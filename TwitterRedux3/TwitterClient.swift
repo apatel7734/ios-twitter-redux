@@ -113,6 +113,24 @@ class TwitterClient: BDBOAuth1RequestOperationManager{
     }
     
     
+    
+    func getRetweetsOfMeWithCompletion(completion: (tweets: [Tweet]?, error: NSError?) -> ()){
+        
+        self.homeTimelineCompletion = completion
+        //get user's timeline
+        TwitterClient.sharedInstance.GET("1.1/statuses/retweets_of_me.json", parameters: nil, success: { (requestOperation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+            
+            println("retweets of me response \(response)")
+            var tweets = Tweet.tweetsWithArray(response as [NSDictionary])
+            self.homeTimelineCompletion?(tweets: tweets, error: nil)
+            
+            }, failure: { (requestOperation: AFHTTPRequestOperation!, error: NSError!) -> Void in
+                println("Failed to get home timeline \(error)")
+                self.homeTimelineCompletion?(tweets: nil, error: nil)
+        })
+    }
+    
+    
     func getHomeTimeLineWithCompletion(completion: (tweets: [Tweet]?, error: NSError?) -> ()){
         
         self.homeTimelineCompletion = completion

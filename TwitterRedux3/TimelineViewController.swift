@@ -26,6 +26,7 @@ class TimelineViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         bgColorView.backgroundColor = UIColor.lightGrayColor()
         
+        
     }
     
     

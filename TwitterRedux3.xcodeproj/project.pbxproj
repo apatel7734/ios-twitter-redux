@@ -28,6 +28,7 @@
 		75A67B4B19E1E29A008BBA8C /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A67B4A19E1E29A008BBA8C /* SidebarViewController.swift */; };
 		75A67B4D19E1E374008BBA8C /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A67B4C19E1E374008BBA8C /* HeaderTableViewCell.swift */; };
 		75A67B4F19E1E37F008BBA8C /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A67B4E19E1E37F008BBA8C /* TimelineTableViewCell.swift */; };
+		75C0021C19E4F9C600CF29EE /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0021B19E4F9C600CF29EE /* UsersTableViewCell.swift */; };
 		99439701CEEB426B84309030 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB7E50165BE45089B61639D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		75A67B4A19E1E29A008BBA8C /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		75A67B4C19E1E374008BBA8C /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		75A67B4E19E1E37F008BBA8C /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
+		75C0021B19E4F9C600CF29EE /* UsersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
 		C0011F8079B74DDFA2C33557 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 				759D38F819E1F5960040D48B /* Models */,
 				75A67B2719E1E09A008BBA8C /* AppDelegate.swift */,
 				75A67B2B19E1E09A008BBA8C /* Main.storyboard */,
+				75C0021B19E4F9C600CF29EE /* UsersTableViewCell.swift */,
 				75A67B2E19E1E09A008BBA8C /* Images.xcassets */,
 				75A67B3019E1E09A008BBA8C /* LaunchScreen.xib */,
 				75A67B2519E1E09A008BBA8C /* Supporting Files */,
@@ -342,6 +345,7 @@
 				759D390019E1F96D0040D48B /* TwitterClient.swift in Sources */,
 				75A67B4D19E1E374008BBA8C /* HeaderTableViewCell.swift in Sources */,
 				75A67B2A19E1E09A008BBA8C /* ViewController.swift in Sources */,
+				75C0021C19E4F9C600CF29EE /* UsersTableViewCell.swift in Sources */,
 				75A67B4F19E1E37F008BBA8C /* TimelineTableViewCell.swift in Sources */,
 				759D38FC19E1F5CE0040D48B /* Tweet.swift in Sources */,
 				75A67B4B19E1E29A008BBA8C /* SidebarViewController.swift in Sources */,

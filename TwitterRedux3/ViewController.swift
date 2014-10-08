@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate{
     
     
     @IBOutlet weak var headerView: UIView!
@@ -22,6 +22,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var followersCounterLabel: UILabel!
     @IBOutlet weak var followingCounterLabel: UILabel!
     
+    
+    @IBOutlet weak var userTableView: UITableView!
+    
+    var retweets = [Tweet]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,6 +36,10 @@ class ViewController: UIViewController {
         headerView.layer.borderWidth = 1
         headerView.clipsToBounds = true
         
+        userTableView.delegate = self
+        userTableView.dataSource = self
+        
+        userTableView.rowHeight = UITableViewAutomaticDimension
         
         if let backUrl = User.currentUser?.backgroundImageUrl{
             backgroundProfileImage.setImageWithURL(NSURL(string: backUrl))
@@ -51,6 +61,50 @@ class ViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        loadRetweetsOfmeAndRefreshTable()
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier("userstableviewcell") as UsersTableViewCell
+        
+        var tweet = retweets[indexPath.row]
+        
+        cell.userNameLabel.text = tweet.user?.name
+        cell.userScreenNameLabel.text = tweet.user?.screenName
+        if let url = tweet.user?.profileImageUrl{
+            cell.userProfileImageView.setImageWithURL(NSURL(string: url))
+        }
+        
+        cell.textDescLabel.text = tweet.text
+        cell.dateTimeLabel.text = tweet.timeAgoDate
+        
+        
+        
+        return cell
+    }
+    
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(retweets.count >= 3){
+            return 3
+        }else if( retweets.count < 3){
+            return retweets.count
+        }else{
+            return 0
+        }
+        
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -66,6 +120,18 @@ class ViewController: UIViewController {
         var appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         return appDelegate.drawerViewController
     }
+    
+    
+    
+    func loadRetweetsOfmeAndRefreshTable(){
+        TwitterClient.sharedInstance.getRetweetsOfMeWithCompletion{ (tweets, error) -> () in
+            if let tweets = tweets{
+                self.retweets = tweets
+                self.userTableView.reloadData()
+            }
+        }
+    }
+    
     
     
 }

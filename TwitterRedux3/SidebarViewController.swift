@@ -70,16 +70,21 @@ class SidebarViewController: UIViewController,UITableViewDelegate,UITableViewDat
         if(indexPath.row == 0){
             println("Profile Clicked")
             var profileViewController = appDelegate.viewControllers[0]
+            profileViewController.title = "Me"
             drawerControllerFromAppDelegate()?.setCenterViewController(profileViewController, withCloseAnimation: true, completion: nil)
             
         }else if ( indexPath.row == 1){
             println("Home Timeline Clicked")
             var homeTimelineController = appDelegate.viewControllers[1]
+            var home = homeTimelineController.childViewControllers[0] as TimelineViewController
+            home.navigationItem.title = "Home"
             drawerControllerFromAppDelegate()?.setCenterViewController(homeTimelineController, withCloseAnimation: true, completion: nil)
             
         }else if(indexPath.row == 2){
             println("Mentions Clicked")
             var mentionTimelineController = appDelegate.viewControllers[1]
+            var mention = mentionTimelineController.childViewControllers[0] as TimelineViewController
+            mention.navigationItem.title = "Mentions"
             drawerControllerFromAppDelegate()?.setCenterViewController(mentionTimelineController, withCloseAnimation: true, completion: nil)
         }
         

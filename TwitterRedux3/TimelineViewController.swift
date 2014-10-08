@@ -15,6 +15,8 @@ class TimelineViewController: UIViewController,UITableViewDelegate,UITableViewDa
     var tweets = [Tweet]()
     var bgColorView = UIView()
     
+    var navTitle: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,7 +27,7 @@ class TimelineViewController: UIViewController,UITableViewDelegate,UITableViewDa
         timelineTableView.rowHeight = UITableViewAutomaticDimension
         
         bgColorView.backgroundColor = UIColor.lightGrayColor()
-        
+        self.navigationItem.title = navTitle
         
     }
     

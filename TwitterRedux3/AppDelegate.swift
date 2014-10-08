@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //contentviewcontroller
         
+
         var sidebarViewController = storyboard.instantiateViewControllerWithIdentifier("sidebarviewcontroller") as SidebarViewController
         
         var contentViewController = storyboard.instantiateViewControllerWithIdentifier("contentviewcontroller") as ViewController

@@ -21,6 +21,8 @@ class SidebarViewController: UIViewController,UITableViewDelegate,UITableViewDat
         sidebarTableView.delegate = self
         sidebarTableView.dataSource = self
         
+        sidebarTableView.rowHeight = UITableViewAutomaticDimension
+        
     }
     
     override func didReceiveMemoryWarning() {

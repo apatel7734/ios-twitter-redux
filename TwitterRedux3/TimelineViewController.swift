@@ -13,7 +13,7 @@ class TimelineViewController: UIViewController,UITableViewDelegate,UITableViewDa
     @IBOutlet weak var timelineTableView: UITableView!
     
     var tweets = [Tweet]()
-    
+    var bgColorView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,11 @@ class TimelineViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         timelineTableView.delegate = self
         timelineTableView.dataSource = self
+        
+        timelineTableView.rowHeight = UITableViewAutomaticDimension
+        
+        bgColorView.backgroundColor = UIColor.lightGrayColor()
+        
     }
     
     
@@ -60,11 +65,13 @@ class TimelineViewController: UIViewController,UITableViewDelegate,UITableViewDa
         cell.userProfileImageview?.clipsToBounds = true
         cell.timeLabel.text = tweet.timeAgoDate
         
+        cell.selectedBackgroundView = bgColorView
+        
         cell.replyButton.tag = indexPath.row
-        cell.replyButton.addTarget(self, action: "replyButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+//        cell.replyButton.addTarget(self, action: "replyButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         
         cell.favoriteButton.tag = indexPath.row
-        cell.favoriteButton.addTarget(self, action: "favoriteButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+//        cell.favoriteButton.addTarget(self, action: "favoriteButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         
         if let fav = tweet.favorited{
             //            updateButtonState(cell.favoriteButton, favorited: fav)
@@ -72,7 +79,7 @@ class TimelineViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         
         cell.retweetButton.tag = indexPath.row
-        cell.retweetButton.addTarget(self, action: "retweetButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+//        cell.retweetButton.addTarget(self, action: "retweetButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         
         
         
@@ -90,7 +97,7 @@ class TimelineViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
     

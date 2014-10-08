@@ -200,7 +200,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="headercell" rowHeight="86" id="7Dk-M3-NgR" customClass="HeaderTableViewCell" customModule="TwitterRedux3" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="headercell" rowHeight="81" id="7Dk-M3-NgR" customClass="HeaderTableViewCell" customModule="TwitterRedux3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Dk-M3-NgR" id="xvr-gG-mit">
@@ -211,7 +211,13 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="65" id="8ux-JQ-cZ4"/>
                                                         <constraint firstAttribute="width" constant="65" id="s7u-go-NAV"/>
+                                                        <constraint firstAttribute="height" constant="65" id="zZr-Ja-ud1"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="8ux-JQ-cZ4"/>
+                                                        </mask>
+                                                    </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGP-rm-8JP">
                                                     <rect key="frame" x="81" y="8" width="99.5" height="26.5"/>
@@ -220,7 +226,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="company name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rz-tS-pe6">
-                                                    <rect key="frame" x="81" y="42" width="93" height="16"/>
+                                                    <rect key="frame" x="81" y="42" width="92.5" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -229,6 +235,7 @@
                                             <constraints>
                                                 <constraint firstItem="6Rz-tS-pe6" firstAttribute="top" secondItem="VGP-rm-8JP" secondAttribute="bottom" constant="8" id="LOW-LL-mZn"/>
                                                 <constraint firstItem="6Rz-tS-pe6" firstAttribute="leading" secondItem="8S3-h5-uXs" secondAttribute="trailing" constant="8" id="OGQ-JW-TGb"/>
+                                                <constraint firstAttribute="bottom" secondItem="8S3-h5-uXs" secondAttribute="bottom" constant="7.5" id="aEn-v5-VKY"/>
                                                 <constraint firstItem="8S3-h5-uXs" firstAttribute="top" secondItem="xvr-gG-mit" secondAttribute="top" constant="8" id="c7i-jy-keA"/>
                                                 <constraint firstItem="VGP-rm-8JP" firstAttribute="leading" secondItem="8S3-h5-uXs" secondAttribute="trailing" constant="8" id="ih2-W4-M6f"/>
                                                 <constraint firstItem="8S3-h5-uXs" firstAttribute="leading" secondItem="xvr-gG-mit" secondAttribute="leading" constant="8" id="nC7-6e-MIy"/>
@@ -291,11 +298,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="139" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TvU-yy-ClK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TvU-yy-ClK">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customtimelinecell" rowHeight="139" id="ogc-98-6VK" customClass="CustomTimelineTableViewCell" customModule="TwitterRedux3" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customtimelinecell" rowHeight="96" id="ogc-98-6VK" customClass="CustomTimelineTableViewCell" customModule="TwitterRedux3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ogc-98-6VK" id="xXa-Yt-0S1">
@@ -303,6 +310,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t0g-gk-Jk2">
                                                     <rect key="frame" x="8" y="8" width="60" height="60"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="FSt-nt-4p3"/>
                                                         <constraint firstAttribute="height" constant="60" id="hIm-a4-Xa9"/>
@@ -314,8 +322,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mU3-9L-RAR">
-                                                    <rect key="frame" x="76" y="28" width="516" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="text" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mU3-9L-RAR">
+                                                    <rect key="frame" x="76" y="28" width="516" height="22.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -333,35 +341,32 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rly-aH-KWq">
-                                                    <rect key="frame" x="76" y="61" width="20" height="20"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <rect key="frame" x="76" y="65" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="9YP-yk-cOV"/>
                                                         <constraint firstAttribute="width" constant="20" id="wd1-Ua-KGe"/>
                                                     </constraints>
-                                                    <state key="normal">
+                                                    <state key="normal" backgroundImage="reply_grey.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poC-Qp-fy5">
-                                                    <rect key="frame" x="136" y="61" width="20" height="20"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poC-Qp-fy5">
+                                                    <rect key="frame" x="136" y="65" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="5Sk-Zj-Bry"/>
                                                         <constraint firstAttribute="width" constant="20" id="UXB-qg-056"/>
                                                     </constraints>
-                                                    <state key="normal">
+                                                    <state key="normal" image="retweeted_grey.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b08-YZ-ewa">
-                                                    <rect key="frame" x="196" y="61" width="20" height="20"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b08-YZ-ewa">
+                                                    <rect key="frame" x="196" y="65" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="DOf-1p-WJc"/>
                                                         <constraint firstAttribute="height" constant="20" id="hbt-yZ-PP2"/>
                                                     </constraints>
-                                                    <state key="normal">
+                                                    <state key="normal" image="favorite_yellow_on.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
@@ -375,6 +380,7 @@
                                                 <constraint firstItem="t0g-gk-Jk2" firstAttribute="top" secondItem="xXa-Yt-0S1" secondAttribute="top" constant="8" id="ThO-If-fR5"/>
                                                 <constraint firstItem="P4X-jS-nkr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="f9r-bN-s0C" secondAttribute="trailing" constant="20" id="bpO-v4-InZ"/>
                                                 <constraint firstItem="4h6-fU-gn9" firstAttribute="leading" secondItem="t0g-gk-Jk2" secondAttribute="trailing" constant="8" id="czK-r8-uMH"/>
+                                                <constraint firstAttribute="bottom" secondItem="rly-aH-KWq" secondAttribute="bottom" constant="10" id="e1n-zC-Wkr"/>
                                                 <constraint firstItem="b08-YZ-ewa" firstAttribute="leading" secondItem="poC-Qp-fy5" secondAttribute="trailing" constant="40" id="eob-kk-C5u"/>
                                                 <constraint firstItem="f9r-bN-s0C" firstAttribute="top" secondItem="xXa-Yt-0S1" secondAttribute="top" constant="8" id="jow-Tw-Wd2"/>
                                                 <constraint firstItem="t0g-gk-Jk2" firstAttribute="leading" secondItem="xXa-Yt-0S1" secondAttribute="leading" constant="8" id="m3y-8S-rRm"/>
@@ -504,6 +510,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="favorite_yellow_on.png" width="32" height="32"/>
         <image name="hambuger_menu_-24.png" width="24" height="13"/>
+        <image name="reply_grey.png" width="32" height="32"/>
+        <image name="retweeted_grey.png" width="32" height="19"/>
     </resources>
 </document>
